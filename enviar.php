@@ -24,14 +24,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nombre'])) {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com'; // Cambia si usas otro proveedor
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'mauriciourquiza0@gmail.com'; // Tu correo
-        $mail->Password   = 'untiuxvavyjrhamq'; // Contraseña de aplicación
+        $mail->Username   = 'tu correo'; // Tu correo
+        $mail->Password   = 'tu contraseña'; // Contraseña de aplicación
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 
         // Remitente y destinatario
         $mail->setFrom($email, $nombre);
-        $mail->addAddress('mauriciourquiza0@gmail.com', 'Mueblería José');
+        $mail->addAddress('tu correo', 'Mueblería José');
 
         // Contenido del correo
         $mail->isHTML(true);
