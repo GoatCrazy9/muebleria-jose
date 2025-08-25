@@ -16,7 +16,7 @@
 
   <!-- SECCIÓN HERO CON PADDING LATERAL RESPONSIVO -->
   <section
-    class="relative max-w-[1600px] h-[800px] mx-auto mt-[60px] rounded-[30px] overflow-hidden flex items-start pt-[100px] px-5 md:px-[60px] shadow-[0_8px_32px_rgba(0,0,0,0.1)] bg-[url('img/img1.png')] bg-cover bg-center">
+    class="relative max-w-[1600px] h-[800px] mx-auto mt-[60px] rounded-[30px] overflow-hidden flex items-start pt-[100px] px-5 md:px-[60px] shadow-[0_8px_32px_rgba(0,0,0,0.1)] bg-[url('img/img1.png')] bg-cover bg-center ">
     <!-- Capa de degradado -->
     <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/60 to-black/10 z-[1]"></div>
 
@@ -45,7 +45,7 @@
 
 
       <!-- Menú Desktop -->
-      <ul class="text-black font-medium no-underline hidden md:flex gap-8 text-lg list-none">
+      <ul class="text-black font-medium no-underline hidden md:flex gap-8 text-lg list-none ">
         <li><a href="#">Catalogo</a></li>
         <li><a href="#">Servicios</a></li>
         <li><a href="#">Proyectos</a></li>
@@ -58,10 +58,10 @@
         class="hidden md:inline-block bg-[#6D4C41] hover:bg-[#1f1f1f] text-white px-4 py-2 rounded-full font-semibold no-underline">
         Solicitar cotización
       </a>
-      
 
-      
-      
+
+
+
 
       <!-- Ícono hamburguesa -->
       <button id="menu-btn" class="md:hidden flex flex-col gap-1 z-20 focus:outline-none">
@@ -87,10 +87,10 @@
       </div>
     </nav>
   </div>
-  
+
 
   <section class="max-w-[1500px] mx-auto mt-12 px-5" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
-    <div class="flex flex-col md:flex-row items-center bg-[#C28564] rounded-[10px] overflow-hidden shadow-lg">
+    <div class="flex flex-col md:flex-row items-center bg-[#A67C52] rounded-[10px] overflow-hidden shadow-lg">
 
       <!-- Texto a la izquierda -->
       <div class="w-full md:w-1/2 p-12 text-white">
@@ -243,17 +243,30 @@
 
       <!-- Columna derecha: Formulario -->
       <form action="enviar.php" method="POST" class="w-full md:w-1/2 mt-4 space-y-3">
-        <input type="text" name="nombre" placeholder="Nombre completo" class="w-full p-3 border border-gray-300 rounded text-base" />
-        <input type="text" name="email" placeholder="E-mail de contacto" class="w-full p-3 border border-gray-300 rounded text-base" />
-        <input type="text" name="telefono" placeholder="Teléfono de contacto" class="w-full p-3 border border-gray-300 rounded text-base" />
-        <input type="text" name="asunto" placeholder="Asunto" class="w-full p-3 border border-gray-300 rounded text-base" />
-        <textarea name="mensaje" placeholder="Tu mensaje" required class="w-full p-3 border border-gray-300 rounded text-base"></textarea>
-        <button type="submit" class="bg-[#A67C52] text-white font-bold py-3 px-6 rounded-[999px] cursor-pointer hover:bg-[#91653F] transition">Enviar
+        <input type="text" name="nombre" placeholder="Nombre completo"
+          class="w-full p-3 border border-gray-300 rounded text-base" />
+        <input type="text" name="email" placeholder="E-mail de contacto"
+          class="w-full p-3 border border-gray-300 rounded text-base" />
+        <input type="text" name="telefono" placeholder="Teléfono de contacto"
+          class="w-full p-3 border border-gray-300 rounded text-base" />
+        <input type="text" name="asunto" placeholder="Asunto"
+          class="w-full p-3 border border-gray-300 rounded text-base" />
+        <textarea name="mensaje" placeholder="Tu mensaje" required
+          class="w-full p-3 border border-gray-300 rounded text-base"></textarea>
+        <button  id="btn-enviar" type="submit"
+          class="bg-[#A67C52] text-white font-bold py-3 px-6 rounded-[999px] cursor-pointer hover:bg-[#91653F] transition">
+          Enviar
         </button>
+        <button id="btn-enviando" type="submit" class="bg-[#A67C52] font-bold py-3 px-6 text-white rounded-[999px] inline-flex cursor-not-allowed transition duration-150" disabled style="display:none;">
+  <svg class="mr-3 -ml-1 size-5 animate-spin text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+  </svg>
+  Enviando...
+</button>
       </form>
     </div>
   </section>
-
 
   <section class="w-full px-4 py-10 " data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
     <div class="max-w-[1200px] mx-auto bg-[#6D4C41] py-12 px-6 rounded-[20px]">
@@ -265,13 +278,6 @@
       </div>
     </div>
   </section>
-
-
-
-
-
-
-
 
   <footer class="w-full bg-[#503b2b] py-12 px-6 mt-8">
     <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-left text-white">
@@ -311,24 +317,36 @@
       <div>
         <h3 class="text-xl font-bold tracking-wide mb-4">Suscríbete</h3>
         <p class="text-sm mb-4">Recibe novedades y promociones directamente en tu correo.</p>
-        <div class="flex flex-col gap-3 w-full">
-          <input type="email" placeholder="Tu correo electrónico"
-            class="p-3 text-black border border-gray-300 rounded w-full" />
-          <button class="bg-white text-[#A67C52] font-bold py-3 px-6 rounded w-full hover:bg-gray-100 transition">
+        <form action="guardar_correo.php" method="POST" class="flex flex-col gap-3 w-full">
+          <input type="email" name="correo" placeholder="Tu correo electrónico"
+            class="p-3 text-black border border-gray-300 rounded w-full" required>
+          <button type="submit"
+            class="bg-white text-[#A67C52] font-bold py-3 px-6 rounded w-full hover:bg-gray-100 transition">
             Suscribirme
           </button>
-        </div>
+        </form>
       </div>
 
-    </div>
-
-
   </footer>
+
+
+ <!-- Boton flotante de WhatsApp que redirige a tu chat-->
+  
+  <a href="https://wa.me/51939162863" target="_blank"
+  class="fixed bottom-8 right-8 z-50 flex items-center justify-center rounded-full bg-white p-4 ring-1 ring-gray-900/5 shadow-lg hover:bg-green-50 transition animate-bounce"
+  style="width:100px; height:100px;">
+  <img src="img/whatsapp_logo.png" alt="WhatsApp" style="width:90px; height:90px;">
+</a>
+
+
+  <script src="script.js"></script>
   <script src="navbar.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+
+
 </body>
 
 </script>
