@@ -1,15 +1,11 @@
 <?php
-
-// Importar clases necesarias de PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// Incluir los archivos fuente de PHPMailer
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 require 'PHPMailer/src/Exception.php';
 
-// Solo procesar si se envió el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nombre'])) {
     $nombre   = htmlspecialchars($_POST['nombre']);
     $email    = htmlspecialchars($_POST['email']);
@@ -20,20 +16,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nombre'])) {
     $mail = new PHPMailer(true);
 
     try {
-        // Configuración SMTP
         $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com'; // Cambia si usas otro proveedor
+        $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'tu correo'; // Tu correo
-        $mail->Password   = 'tu contraseña'; // Contraseña de aplicación
+        $mail->Username   = 'mauriciourquiza0@gmail.com';
+        $mail->Password   = 'untiuxvavyjrhamq';
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 
-        // Remitente y destinatario
-        $mail->setFrom($email, $nombre);
-        $mail->addAddress('tu correo', 'Mueblería José');
+        $mail->setFrom('mauriciourquiza0@gmail.com', $nombre);
+        $mail->addAddress('mauriciourquiza0@gmail.com', 'Mueblería José');
 
-        // Contenido del correo
         $mail->isHTML(true);
         $mail->Subject = $asunto ?: 'Nuevo mensaje de la web';
         $mail->Body    = "
@@ -45,19 +38,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nombre'])) {
         ";
         $mail->AltBody = "Nombre: {$nombre}\nEmail: {$email}\nTeléfono: {$telefono}\nMensaje: {$mensaje}";
 
-       if ($mail->send()) {
-            header("Location: index.html?status=ok");
-            exit;
+        if ($mail->send()) {
+            echo "ok";
         } else {
-            header("Location: index.html?status=error");
-            exit;
+            echo "error";
         }
-
     } catch (Exception $e) {
-        header("Location: index.html?status=error");
-        exit;
+        echo "error";
     }
 } else {
-    echo "Método no permitido.";
+    echo "error";
 }
-
