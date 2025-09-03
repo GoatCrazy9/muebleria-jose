@@ -25,7 +25,7 @@ export default function Navbar() {
         />
 
         {/* Menú Desktop */}
-        <ul className="hidden md:flex gap-8 text-lg font-medium text-black space-x-7">
+        <ul className="hidden md:flex gap-8 text-lg font-medium text-black ">
           {["Catálogo", "Servicios", "Proyectos", "Blog", "Contacto"].map(
             (item, i) => (
               <li key={i}>
