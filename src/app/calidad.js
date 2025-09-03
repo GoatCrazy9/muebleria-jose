@@ -6,7 +6,7 @@ export default function Calidad() {
   return (
     <section
       className="w-full px-6 py-20 bg-[#FAF8F6]"
-      data-aos="fade-up-left"
+      data-aos="fade-up"
       data-aos-duration="1000"
       data-aos-delay="300"
     >

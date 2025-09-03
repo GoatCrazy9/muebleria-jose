@@ -30,7 +30,7 @@ export default function Categorias() {
 
   return (
     <section className="w-full px-4 py-12"
-      data-aos="fade-up-left"
+      data-aos="fade-up"
       data-aos-duration="1000"
       data-aos-delay="300"
     >

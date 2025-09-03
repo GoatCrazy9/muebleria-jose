@@ -7,7 +7,7 @@ export default function FAQ() {
     <section
       className="w-full py-20 px-6 "
       id="faq"
-      data-aos="fade-up-left"
+      data-aos="fade-up"
       data-aos-duration="1000"
       data-aos-delay="300"
     >

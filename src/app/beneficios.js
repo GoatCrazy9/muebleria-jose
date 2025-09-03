@@ -5,7 +5,7 @@ export default function Beneficios() {
     <section className="w-full px-4 py-16" data-aos="fade-up">
       <div
         className="max-w-[1200px] mx-auto bg-[#D8B892] py-12 px-8 rounded-[20px] shadow-xl"
-      data-aos="fade-up-left"
+      data-aos="fade-up"
       data-aos-duration="1000"
       data-aos-delay="300"
       >

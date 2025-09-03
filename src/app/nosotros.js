@@ -6,7 +6,7 @@ export default function Nosotros() {
   return (
     <section
       className="max-w-[1500px] mx-auto mt-12 px-5"
-      data-aos="fade-up-left"
+      data-aos="fade-up"
       data-aos-duration="1000"
       data-aos-delay="300"
     >

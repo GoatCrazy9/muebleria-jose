@@ -1,9 +1,9 @@
 export default function Materiales() {
   return (
     <section className="w-full py-20 px-6 bg-gradient-to-b " id="materiales"
-          data-aos="fade-up-left"
+          data-aos="fade-up"
       data-aos-duration="1000"
-      data-aos-delay="300">
+      data-aos-delay="300"> 
       <div className="max-w-[1200px] mx-auto text-center">
         {/* Título */}
         <h2 className="text-4xl font-bold text-[#503b2b] mb-12 relative inline-block">

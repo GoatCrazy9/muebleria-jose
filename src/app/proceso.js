@@ -32,7 +32,7 @@ export default function Proceso() {
   return (
     <section
       className="w-full py-20 px-6"
-       data-aos="fade-up-left"
+       data-aos="fade-up"
       data-aos-duration="1000"
       data-aos-delay="300"
     >

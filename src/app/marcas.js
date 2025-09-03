@@ -4,7 +4,7 @@ export default function Marcas() {
   return (
     <section
       className="max-w-[1400px] mx-auto px-5 mt-16 "
-      data-aos="fade-left"
+      data-aos="fade-up"
       data-aos-duration="1000"
       data-aos-delay="300"
     >

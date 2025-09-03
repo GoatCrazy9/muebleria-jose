@@ -36,7 +36,7 @@ export default function Contacto() {
 
   return (
     <section className="relative w-full py-5 px-6 md:px-12 lg:px-20"
-          data-aos="fade-up-left"
+          data-aos="fade-up"
       data-aos-duration="1000"
       data-aos-delay="300">
       <div
