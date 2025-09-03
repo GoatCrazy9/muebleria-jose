@@ -34,7 +34,7 @@ export default function Testimonios() {
   return (
     <section
       className="w-full py-20 px-6"
-      data-aos="fade-up-right"
+      data-aos="fade-up-left"
       data-aos-duration="1000"
       data-aos-delay="300"
     >

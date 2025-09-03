@@ -7,7 +7,7 @@ export default function Dormitorio() {
   return (
     <section
       className="max-w-[1500px] mx-auto mt-4 px-5"
-            data-aos="fade-up-right"
+            data-aos="fade-up-left"
       data-aos-duration="1000"
       data-aos-delay="300"
     >
