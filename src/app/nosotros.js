@@ -6,7 +6,7 @@ export default function Nosotros() {
   return (
     <section
       className="max-w-[1500px] mx-auto mt-12 px-5"
-      data-aos="fade-right"
+      data-aos="fade-up-right"
       data-aos-duration="1000"
       data-aos-delay="300"
     >
@@ -44,10 +44,10 @@ export default function Nosotros() {
       {/* Bloques de misión y visión */}
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Misión */}
-        <div className="bg-white shadow-md rounded-[20px] p-8 flex flex-col items-center text-center">
-          <Target className="w-12 h-12 text-[#A67C52] mb-4" />
-          <h3 className="text-2xl font-bold text-[#6B4C2D] mb-3">Nuestra Misión</h3>
-          <p className="text-lg text-[#7A5A3A]">
+        <div className="bg-[#D8B892] shadow-md rounded-[20px] p-8 flex flex-col items-center text-center">
+          <Target className="w-12 h-12 text-[#503b2b] mb-4" />
+          <h3 className="text-2xl font-bold text-[#503b2b] mb-3">Nuestra Misión</h3>
+          <p className="text-lg text-[#5C4033]">
             Brindar muebles de alta calidad que transformen los espacios de nuestros
             clientes en lugares únicos, combinando confort, durabilidad y diseño
             personalizado.
@@ -55,10 +55,10 @@ export default function Nosotros() {
         </div>
 
         {/* Visión */}
-        <div className="bg-white shadow-md rounded-[20px] p-8 flex flex-col items-center text-center">
-          <Eye className="w-12 h-12 text-[#A67C52] mb-4" />
-          <h3 className="text-2xl font-bold text-[#6B4C2D] mb-3">Nuestra Visión</h3>
-          <p className="text-lg text-[#7A5A3A]">
+        <div className="bg-[#6D4C41] shadow-md rounded-[20px] p-8 flex flex-col items-center text-center">
+          <Eye className="w-12 h-12 text-[#EADFD6] mb-4" />
+          <h3 className="text-2xl font-bold text-white mb-3">Nuestra Visión</h3>
+          <p className="text-lg text-[#EADFD6]">
             Ser reconocidos como la mueblería líder en innovación y compromiso con
             la excelencia, creando hogares llenos de calidez y estilo en todo el país.
           </p>

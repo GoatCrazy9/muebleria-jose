@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { Quote } from "lucide-react";
 
 export default function Testimonios() {
   const testimonios = [
@@ -26,28 +27,56 @@ export default function Testimonios() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % testimonios.length);
-    }, 4000); // Cambia cada 4 segundos
+    }, 5000);
     return () => clearInterval(interval);
   }, [testimonios.length]);
 
   return (
-    <section className="w-full py-16 px-6"
-    data-aos="fade-right"
-    data-aos-duration="1000"
-    data-aos-delay="300"
+    <section
+      className="w-full py-20 px-6"
+      data-aos="fade-up-right"
+      data-aos-duration="1000"
+      data-aos-delay="300"
     >
       <div className="max-w-[1000px] mx-auto text-center">
-        <h2 className="text-2xl font-bold text-[#503b2b] mb-10">
+        <h2 className="text-3xl font-extrabold text-[#503b2b] mb-12">
           Testimonios de nuestros clientes
         </h2>
 
-        <div className="relative bg-[#D8B892] shadow-lg rounded-2xl p-8 mx-auto max-w-xl transition-all duration-500">
-          <p className="text-gray-700 italic mb-4">
-            “{testimonios[index].texto}”
-          </p>
-          <span className="font-semibold text-[#503b2b]">
-            — {testimonios[index].nombre}
-          </span>
+        {/* Contenedor principal */}
+        <div className="relative bg-[#D8B892] shadow-lg rounded-2xl p-10 mx-auto max-w-xl overflow-hidden">
+          {/* Ícono decorativo */}
+          <Quote
+            className="absolute top-6 left-6 text-[#A67C52] opacity-20"
+            size={60}
+          />
+
+          {/* Testimonio con animación */}
+          <div
+            key={index}
+            className="transition-all duration-700 ease-in-out opacity-100"
+          >
+            <p className="text-[#3a2a1d] italic text-lg mb-6 leading-relaxed">
+              “{testimonios[index].texto}”
+            </p>
+            <span className="font-semibold text-[#503b2b] text-base">
+              — {testimonios[index].nombre}
+            </span>
+          </div>
+
+          {/* Indicadores */}
+          <div className="flex justify-center gap-2 mt-6">
+            {testimonios.map((_, i) => (
+              <span
+                key={i}
+                className={`w-3 h-3 rounded-full transition-all ${
+                  i === index
+                    ? "bg-[#503b2b] scale-110"
+                    : "bg-[#A67C52] opacity-50"
+                }`}
+              ></span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

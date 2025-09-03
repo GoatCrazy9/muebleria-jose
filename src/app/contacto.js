@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Mail, Phone, MapPin, User, MessageSquare } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Contacto() {
   const [loading, setLoading] = useState(false);
@@ -25,111 +25,126 @@ export default function Contacto() {
         setMessage("✅ Tu mensaje fue enviado correctamente. ¡Gracias por escribirnos!");
         e.target.reset();
       } else {
-        setMessage("❌ Ocurrió un error al enviar tu mensaje. Intenta nuevamente.");
+        setMessage("❌ Ocurrió un error al enviar tu mensaje.");
       }
-    } catch (error) {
-      setMessage("⚠️ Error de conexión. Verifica tu internet.");
+    } catch {
+      setMessage("⚠️ Error de conexión. Intenta más tarde.");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <section
-      className="w-full px-5 md:px-10 lg:px-[60px] mt-[20px]"
-      data-aos="fade-up"
+    <section className="relative w-full py-5 px-6 md:px-12 lg:px-20"
+          data-aos="fade-up-right"
       data-aos-duration="1000"
-    >
-      <div className="max-w-[1500px] bg-[#D8B892] rounded-[30px] mx-auto flex flex-col md:flex-row items-stretch gap-8 py-12 px-6 md:px-[60px]">
-        
-        {/* Columna izquierda: Info de contacto */}
-        <div className="w-full md:w-1/2 text-left flex flex-col justify-center">
-          <h2 className="text-3xl font-bold text-[#6B4C2D] mb-4">
-            Contáctanos
+      data-aos-delay="300">
+      <div
+        className="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 
+        bg-gradient-to-r from-[#A67C52] to-[#C69B7B] 
+        rounded-3xl shadow-2xl overflow-hidden p-10"
+      >
+        {/* Columna izquierda */}
+        <div className="flex flex-col justify-center text-white pr-6">
+          <h2 className="text-4xl font-bold mb-6 leading-tight">
+            Conversemos sobre tu espacio 
           </h2>
-          <p className="text-lg text-[#7A5A3A] mb-6">
-            Si necesitas ayuda u orientación, escríbenos a través del formulario o llámanos. 
-            Estamos listos para asesorarte y conversar contigo.
+          <p className="text-lg opacity-90 mb-10">
+            Cuéntanos tu idea y la hacemos realidad. Nuestro equipo está listo para asesorarte.
           </p>
 
-          <div className="space-y-4 text-[#503b2b] text-base">
-            <p className="flex items-center gap-2">
-              <Phone size={18} /> <a href="tel:+51999999999" className="hover:underline">+51 999 999 999</a>
-            </p>
-            <p className="flex items-center gap-2">
-              <Mail size={18} /> <a href="mailto:contacto@empresa.com" className="hover:underline">contacto@empresa.com</a>
-            </p>
-            <p className="flex items-center gap-2">
-              <MapPin size={18} /> Av. Angamos Este 1551, Surquillo, Lima
-            </p>
+          <div className="space-y-6 text-base">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white/20">
+                <Phone size={22} />
+              </div>
+              <a href="tel:+51999999999" className="hover:underline">
+                +51 939 162 863
+              </a>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white/20">
+                <Mail size={22} />
+              </div>
+              <a href="mailto:contacto@empresa.com" className="hover:underline">
+                mauriciourquiza0@gmail.com
+              </a>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white/20">
+                <MapPin size={22} />
+              </div>
+              Av. Angamos Este 1551, Surquillo, Lima
+            </div>
           </div>
         </div>
 
         {/* Columna derecha: Formulario */}
-        <form onSubmit={handleSubmit} className="w-full md:w-1/2 space-y-3 bg-white p-6 rounded-2xl shadow-md">
-          <div className="flex items-center border rounded px-3 py-2">
-            <User size={18} className="text-gray-400 mr-2" />
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white rounded-2xl shadow-lg p-8 text-gray-800"
+        >
+          <h3 className="text-2xl font-semibold text-[#6B4C2D] mb-6">
+            Envíanos un mensaje
+          </h3>
+
+          <div className="space-y-5">
             <input
               type="text"
               name="nombre"
               placeholder="Nombre completo"
               required
-              className="w-full outline-none bg-transparent"
+              className="w-full border-b-2 border-gray-300 focus:border-[#A67C52] outline-none py-2 transition-all"
             />
-          </div>
-          <div className="flex items-center border rounded px-3 py-2">
-            <Mail size={18} className="text-gray-400 mr-2" />
             <input
               type="email"
               name="email"
-              placeholder="E-mail de contacto"
+              placeholder="Correo electrónico"
               required
-              className="w-full outline-none bg-transparent"
+              className="w-full border-b-2 border-gray-300 focus:border-[#A67C52] outline-none py-2 transition-all"
             />
-          </div>
-          <div className="flex items-center border rounded px-3 py-2">
-            <Phone size={18} className="text-gray-400 mr-2" />
             <input
               type="tel"
               name="telefono"
-              placeholder="Teléfono de contacto"
-              className="w-full outline-none bg-transparent"
+              placeholder="Teléfono (opcional)"
+              className="w-full border-b-2 border-gray-300 focus:border-[#A67C52] outline-none py-2 transition-all"
             />
-          </div>
-          <div className="flex items-center border rounded px-3 py-2">
-            <MessageSquare size={18} className="text-gray-400 mr-2" />
             <input
               type="text"
               name="asunto"
               placeholder="Asunto"
-              className="w-full outline-none bg-transparent"
+              className="w-full border-b-2 border-gray-300 focus:border-[#A67C52] outline-none py-2 transition-all"
             />
+            <textarea
+              name="mensaje"
+              placeholder="Tu mensaje..."
+              required
+              className="w-full border-2 border-gray-300 focus:border-[#A67C52] outline-none p-3 rounded-lg transition-all h-32"
+            ></textarea>
           </div>
-          <textarea
-            name="mensaje"
-            placeholder="Tu mensaje"
-            required
-            className="w-full p-3 border rounded bg-transparent h-32 resize-none"
-          ></textarea>
 
-          {/* Botón Enviar */}
+          {/* Botón */}
           <button
             type="submit"
             disabled={loading}
-            className={`w-full bg-[#A67C52] text-white font-bold py-3 px-6 rounded-[999px] transition ${
-              loading ? "cursor-not-allowed opacity-70" : "hover:bg-[#91653F]"
+            className={`mt-6 w-full bg-gradient-to-r from-[#A67C52] to-[#91653F] text-white font-semibold py-3 px-6 rounded-full shadow-md transition-all ${
+              loading
+                ? "cursor-not-allowed opacity-70"
+                : "hover:scale-105 hover:shadow-lg"
             }`}
           >
-            {loading ? "Enviando..." : "Enviar"}
+            {loading ? "Enviando..." : "Enviar mensaje"}
           </button>
 
-          {/* Mensaje de estado */}
+          {/* Mensaje */}
           {message && (
             <div
-              className={`mt-3 text-center font-medium p-3 rounded ${
-                message.startsWith("✅") ? "bg-green-100 text-green-700" :
-                message.startsWith("❌") ? "bg-red-100 text-red-700" :
-                "bg-yellow-100 text-yellow-700"
+              className={`mt-4 text-center font-medium p-3 rounded-lg ${
+                message.startsWith("✅")
+                  ? "bg-green-100 text-green-700"
+                  : message.startsWith("❌")
+                  ? "bg-red-100 text-red-700"
+                  : "bg-yellow-100 text-yellow-700"
               }`}
             >
               {message}

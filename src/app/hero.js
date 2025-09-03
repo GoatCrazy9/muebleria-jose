@@ -4,9 +4,10 @@ export default function Hero() {
   return (
     
     <section
-      className="relative max-w-[1600px] h-[800px] mx-auto mt-[60px] rounded-[30px] overflow-hidden flex items-start pt-[100px] px-5 md:px-[60px] shadow-[0_8px_32px_rgba(0,0,0,0.1)] bg-[url('/img/img1.png')] bg-cover bg-center "
-      data-aos-duration="1000" 
+      className="relative max-w-[1700px] h-[800px] mx-auto mt-[60px] rounded-[30px] overflow-hidden flex items-start pt-[100px] px-5 md:px-[60px] shadow-[0_8px_32px_rgba(0,0,0,0.1)] bg-[url('/img/img1.png')] bg-cover bg-center "
       data-aos="fade-left"
+      data-aos-duration="1000" 
+      data-aos-delay="300"
     >
       {/* Capa de degradado */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/60 to-black/10 z-[1]"></div>

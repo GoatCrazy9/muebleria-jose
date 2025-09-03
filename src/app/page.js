@@ -1,7 +1,6 @@
 import Navbar from "./navbar";
 import Hero from "./hero";
 import Seccion01 from "./seccion01";
-import Marcas from "./marcas";
 import Dormitorio from "./dormitorio";
 import Calidad from "./calidad";
 import Contacto from "./contacto";

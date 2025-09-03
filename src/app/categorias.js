@@ -30,9 +30,9 @@ export default function Categorias() {
 
   return (
     <section className="w-full px-4 py-12"
-    data-aos="fade-left"
-    data-aos-duration="1000"
-    data-aos-delay="300"
+      data-aos="fade-up-left"
+      data-aos-duration="1000"
+      data-aos-delay="300"
     >
       <div className="max-w-[1200px] mx-auto">
         <h2 className="text-2xl font-bold text-center mb-10 text-[#503b2b]">
