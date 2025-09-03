@@ -5,7 +5,7 @@ export default function Hero() {
     
     <section
       className="relative max-w-[1700px] h-[800px] mx-auto mt-[60px] rounded-[30px] overflow-hidden flex items-start pt-[100px] px-5 md:px-[60px] shadow-[0_8px_32px_rgba(0,0,0,0.1)] bg-[url('/img/img1.png')] bg-cover bg-center "
-      data-aos="fade-left"
+      data-aos="fade-up"
       data-aos-duration="1000" 
       data-aos-delay="300"
     >
