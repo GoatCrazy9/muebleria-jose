@@ -13,9 +13,7 @@ import {
 export default function Footer() {
   return (
     <footer className="w-full bg-[#503b2b] text-white pt-12 pb-6 px-6"
-          data-aos="fade-up"
-      data-aos-duration="500"
-      data-aos-delay="200">
+ >
       <div className="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-5 gap-10">
         
         {/* CTA Final */}
